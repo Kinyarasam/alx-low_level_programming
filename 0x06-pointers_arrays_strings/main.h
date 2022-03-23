@@ -9,7 +9,7 @@ extern char *cap_string(char *);
 extern char *leet(char *);
 extern char *rot13(char *);
 extern void print_number(int n):
-int _putchar(char);
+int _putchar(char c);
 extern char *infinite_add(char *n1, char *n2, char *r, int size_r);
 extern void print_buffer(char *b, int size);
 #endif

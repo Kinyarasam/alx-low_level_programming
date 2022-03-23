@@ -8,6 +8,5 @@ extern char *string_toupper(char *);
 extern char *cap_string(char *);
 extern char *leet(char *);
 extern char *rot13(char *);
-extern char *rot13(char *s)
 #endif
 

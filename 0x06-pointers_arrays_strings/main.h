@@ -12,4 +12,5 @@ extern void print_number(int n):
 extern int _putchar(char c);
 extern char *infinite_add(char *n1, char *n2, char *r, int size_r);
 extern void print_buffer(char *b, int size);
+void print_buffer(char *b, int size);
 #endif

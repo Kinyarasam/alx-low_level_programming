@@ -14,5 +14,4 @@ extern char *infinite_add(char *n1, char *n2, char *r, int size_r);
 extern void print_buffer(char *b, int size);
 void print_buffer(char *b, int size);
 extern int _strcmp(char *s1, char *s2);
-void print_buffer(char *b, int size);
 #endif

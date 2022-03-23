@@ -9,5 +9,6 @@ extern char *cap_string(char *);
 extern char *leet(char *);
 extern char *rot13(char *);
 extern void print_number(int n):
+extern int _putchar(char);
 #endif
 

@@ -16,4 +16,4 @@ All of the following files are programs written in C:
 | -------- | ----------- |
 |[0-puts\_recursion](./0-puts_recursion.c)|prints a string followed by a new line.|
 
-&copy; March,2022 Kinyarasam
+			March,2022 &copy;Kinyarasam

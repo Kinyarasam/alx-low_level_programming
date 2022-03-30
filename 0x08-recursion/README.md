@@ -14,4 +14,4 @@ All of the following files are programs written in C:
 
 | Filename | Description |
 | -------- | ----------- |
-|[0-puts\_recursion](./0-puts_recursion.c)||
+|[0-puts\_recursion](./0-puts_recursion.c)|prints a string followed by a new line.|

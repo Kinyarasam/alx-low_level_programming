@@ -1,5 +1,5 @@
 #include "main.h"
-#include "stdio.h"
+
 /**
  * _strcat - copy src string ontop of dest
  * @src: Char[] to append to dest
@@ -8,22 +8,15 @@
  */
 char *_strcat(char *dest, char *src)
 {
-	int countDest = 0;
-	int countSrc = 0;
+	int a = -1, i;
+	for (i = 0; dest[i] != '\0'; i++);
 
-	while (dest[countDest] != '\0')
-	{
-		countDest++;
-	}
-
-	while (src[countSrc] != '\0')
-	{
-		dest[countDest] += src[countSrc];
-		countSrc++;
-		countDest++;
-	}
-
-	dest += '\0';
+	do {
+		a++;
+		dest[i] = src[a];
+		i++;
+	} 
+	while (src[a] != '\0');
 
 	return (dest);
 }

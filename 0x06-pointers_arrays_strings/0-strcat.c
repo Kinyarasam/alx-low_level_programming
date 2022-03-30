@@ -1,22 +1,46 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strcat - copy src string ontop of dest
- * @src: Char[] to append to dest
- * @dest: Char[] to be appended to
- * Return: Always 0.
+ * _strlen - returns the length of a string
+ * @str:a string of length to be returned
+ * Return: returns the length of a string
+ */
+int _strlen(char *str)
+{
+	int length = 0;
+
+	while (*str)
+	{
+		str++;
+		length++;
+	}
+
+	return (length);
+
+}
+
+
+/**
+ * _strcat - concatinates two strings
+ * @dest:destination pointer
+ * @src:pointer to a string
+ * Return: concatinated string
  */
 char *_strcat(char *dest, char *src)
 {
-	int a = -1, i;
-	for (i = 0; dest[i] != '\0'; i++);
+	char *cat = dest + _strlen(dest);
+	int length =  _strlen(dest) + _strlen(src);
 
-	do {
-		a++;
-		dest[i] = src[a];
-		i++;
-	} 
-	while (src[a] != '\0');
+	while (*src)
+	{
+		*cat += *src;
+		src++;
+		cat++;
+	}
+	*cat += '\0';
+	cat -= (length);
+	*dest = *cat;
 
-	return (dest);
+	return (cat);
 }

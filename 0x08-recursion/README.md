@@ -15,4 +15,7 @@ All of the following files are programs written in C:
 | Filename | Description |
 | -------- | ----------- |
 |[0-puts\_recursion](./0-puts_recursion.c)|prints a string followed by a new line.|
+|[1-print\_rev\_recursion](./1-print_rev_recursion)|prints a string in reverse.|
+|[2-strlen\_recursion](./2-strlen_recursion.c)|Returns the length of a string|
+
 > March,2022 &copy;Kinyarasam

@@ -4,8 +4,7 @@
  * isPrime - helper function for is_prime_number
  * @n: input number
  * @i: iterator
- * Return: 1 on Success
- * Return: 0 on fail
+ * Return: 1 if true, 0 if false
  */
 int isPrime(int n, int i)
 {
@@ -13,15 +12,14 @@ int isPrime(int n, int i)
 		return (1);
 	if (n % i == 0)
 		return (0);
-	return (isPrime(n, i -1));
+	return (isPrime(n, i - 1));
 }
 
 /**
  * is_prime_number - returns 1 if the input integer is a prime number,
- * otherwise; return 0
+ * otherwise return 0
  * @n: input number
- * Return: 1 if success.
- * Return: 0 on failure.
+ * Return: 1 if true, 0 if false
  */
 int is_prime_number(int n)
 {

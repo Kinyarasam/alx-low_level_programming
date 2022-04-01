@@ -2,8 +2,9 @@
 
 /**
  * _isalpha - check for lower case letter
- * @c : character to check
- * Return:0 or 1
+ * @c: character to check
+ * Return: Always 0. (Success) 
+ * otherwise 1.
  */
 int _isalpha(int c)
 {

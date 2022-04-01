@@ -2,53 +2,44 @@
 #include <stdlib.h>
 
 /**
- * isInt - Checkes if s is an integer
+ * isInt - checks if s is an integer
  * @s: string to validate
- * Return: Always 0. (Success)
+ * Return: 0 (Success)
  * otherwise: Always 1.
  */
+
 int isInt(char *s)
 {
 	int i = 0;
-	
-	for(i = 0; s[i] != '\0'; i++)
+	while (s[i] != '\0')
 	{
-		if(s[i] < '0' || s[i] > '9')
-			return (0);
+		if (s[i] < '0' || s[i] > '9')
+			return (1);
+		i++;
 	}
-	return (1);
+	return (0);
 }
 
 /**
- * main - prints the minimum number of coins to make change for an amount of money
+ * main - prints the minimum number of coins to make change for an money
  * @argc: arguement count
- * @argv: arguement vector.
- * Return: Always 0.(Success)
+ * @argv: arguement vector
+ * Return: 0. (Success)
  */
+
 int main(int argc, char *argv[])
 {
-	int i = 0, coinUsed = 0, coin = 0;
-	int coins[] = {25, 10, 5, 2, 1};
-
-	if(argc != 2)
+	int sum = 0;
+	
+	while (--argc)
 	{
-		printf("Error\n");
-		return (1);
-	}
-	if(isInt(argv[1]))
-	{
-		i = atoi(argv[1]);
-		while(i > 0 && coin <=4)
+		if (isInt(argv[argc]))
 		{
-			if(i >= coins[coin])
-			{
-				i -= coins[coin];
-				coinUsed++;
-			}
-			else
-				coin++;
+			printf("Error\n");
+			return (1);
 		}
+		sum += atoi(argv[argc]);
 	}
-	printf("%i\n", coinUsed);
+	printf("%i\n", sum);
 	return (0);
 }

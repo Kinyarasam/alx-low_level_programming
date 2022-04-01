@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
 	int sum = 0;
 	while (--argc)
 	{
-		if (isInteger(argv[argc]))
+		if (isInt(argv[argc]))
 		{
 			printf("Error\n");
 			return (1);

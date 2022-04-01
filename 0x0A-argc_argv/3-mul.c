@@ -5,7 +5,8 @@
  * main - Multiplies two numbers
  * @argc: arguement count
  * @argv: arguement vector
- * Return: Always 0.
+ * Return: Always 1 (Fail)
+ * Return: Always 0 (Success)
  */
 int main(int argc, char *argv[])
 {
@@ -14,12 +15,10 @@ int main(int argc, char *argv[])
 	if(argc > 1)
 	{
 		for(i = 1; i < argc; i++)
-		{
 			mul *= atoi(argv[i]);
-		}
 		printf("%d\n", mul);
+		return (0);
 	}
-	else
-		printf("Error\n");
-	return (0);
+	printf("Error\n");
+	return (1);
 }

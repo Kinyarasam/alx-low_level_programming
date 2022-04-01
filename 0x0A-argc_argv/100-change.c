@@ -2,12 +2,11 @@
 #include <stdlib.h>
 
 /**
- * isInt - checks if s is an integer
+ * isInt - Checkes if s is an integer
  * @s: string to validate
- * Return: 0 (Success)
+ * Return: Always 0. (Success)
  * otherwise: Always 1.
  */
-
 int isInt(char *s)
 {
 	int i = 0;
@@ -21,26 +20,25 @@ int isInt(char *s)
 }
 
 /**
- * main - prints the minimum number of coins to make change for an money
+ * main - prints the minimum number of coins to make change for an amount of money
  * @argc: arguement count
- * @argv: arguement vector
- * Return: 0. (Success)
+ * @argv: arguement vector.
+ * Return: Always 0.(Success)
  */
-
 int main(int argc, char *argv[])
 {
 	int i = 0, coinUsed = 0, coin = 0;
 	int coins[] = {25, 10, 5, 2, 1};
-	
+
 	if(argc != 2)
 	{
 		printf("Error\n");
 		return (1);
 	}
-	if(isInt(arg[1]))
+	if(isInt(argv[1]))
 	{
 		i = atoi(argv[1]);
-		while(coin = 0; i > 0 && coin <= 4; coin++)
+		while(i > 0 && coin <=4)
 		{
 			if(i >= coins[coin])
 			{

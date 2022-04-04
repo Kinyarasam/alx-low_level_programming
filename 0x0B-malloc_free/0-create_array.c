@@ -1,12 +1,14 @@
-#include "holberton.h"
 #include <stdlib.h>
+#include "holberton.h"
+
 /**
- * create_array - Creates an array of chars and initializes it with a special char.
- * @size: size of the array.
- * @c: char to fill the array with.
+ * create_array - creates an array of chars, and initializes it with a specific char.
+ * @size: size of array
+ * @c: char to fill array with
  *
- * Return: Strings of char
+ * Return: string of chars
  */
+
 char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
@@ -16,8 +18,6 @@ char *create_array(unsigned int size, char c)
 	if (!size || !ptr)
 		return (NULL);
 	for (i = 0; i < size; i++)
-	{
 		ptr[i] = c;
-	}
 	return (ptr);
 }

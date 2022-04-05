@@ -7,6 +7,8 @@
  * @s: string
  * Return: int
  */
+
+
 int _strlen(char *s)
 {
 	int size = 0;
@@ -21,6 +23,7 @@ int _strlen(char *s)
  * @s2: string 2
  * Return: pointer
  */
+
 char *str_concat(char *s1, char *s2)
 {
 	int size1, size2, i;

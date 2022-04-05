@@ -19,7 +19,6 @@ int isSpace(char c)
  */
 int startIndex(char *s, int index)
 {
-
 	while (isSpace(*(s + index)))
 		index++;
 	return (index);
@@ -74,9 +73,11 @@ char **strtow(char *str)
 
 	if (!str || !countWords(str) || !*str)
 		return (NULL);
+
 	ptr = malloc(sizeof(char *) * (countWords(str) + 1));
 	if (!ptr)
 		return (NULL);
+	
 	for (i = 0; i < countWords(str); i++)
 	{
 		start = startIndex(str, j);
@@ -85,6 +86,7 @@ char **strtow(char *str)
 		ptr[i] = malloc(sizeof(char) * (len + 1));
 		if (!ptr[i])
 			return (NULL);
+	
 		for (k = 0; k < len; k++)
 			ptr[i][k] = str[start++];
 		ptr[i][k++] = 0;

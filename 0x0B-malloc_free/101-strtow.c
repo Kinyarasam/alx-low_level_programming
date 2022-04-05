@@ -72,12 +72,14 @@ char **strtow(char *str)
 	int i, k, len, start, end, j = 0;
 
 	if (!str || !countWords(str) || !*str)
+	{
 		return (NULL);
-
+	}
 	ptr = malloc(sizeof(char *) * (countWords(str) + 1));
 	if (!ptr)
+	{	
 		return (NULL);
-	
+	}
 	for (i = 0; i < countWords(str); i++)
 	{
 		start = startIndex(str, j);
@@ -85,13 +87,17 @@ char **strtow(char *str)
 		len = end - start;
 		ptr[i] = malloc(sizeof(char) * (len + 1));
 		if (!ptr[i])
+		{
 			return (NULL);
-	
+		}
 		for (k = 0; k < len; k++)
+		{	
 			ptr[i][k] = str[start++];
+		}
 		ptr[i][k++] = 0;
 		j = end + 1;
 	}
+	
 	ptr[i] = NULL;
 	return (ptr);
 }

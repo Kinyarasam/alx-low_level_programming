@@ -1,103 +1,83 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
- * isSpace - determines if character is a space or not
- * @c: input char
- * Return: 1 if true or 0 or not
+ * get_words - get the number of words into str
+ * @str: string to split
+ * Return: int , length number of words
  */
-int isSpace(char c)
-{
-	return (c == ' ');
-}
 
-/**
- * startIndex - returns first index of non-space char
- * @s: input string
- * @index: starting index
- * Return: index of first non-space char
- */
-int startIndex(char *s, int index)
+int get_words(char *str)
 {
-	while (isSpace(*(s + index)))
-		index++;
-	return (index);
-}
+	int i, size = 0;
 
-/**
- * endIndex - returns last index of non-space char
- * @s: input string
- * @index: starting index
- * Return: index of last index of non-space char
- */
-int endIndex(char *s, int index)
-{
-	while (!isSpace(*(s + index)))
-		index++;
-	return (index);
-}
-
-/**
- * countWords - counts numbers of words in string
- * @s: input string
- * Return: number of words
- */
-int countWords(char *s)
-{
-	int wordOn = 0;
-	int words = 0;
-
-	while (*s)
+	for (i = 0; *(str + i); i++)
 	{
-		if (isSpace(*s) && wordOn)
-			wordOn = 0;
-		else if (!isSpace(*s) && !wordOn)
+
+		if (str[i] == ' ' && str[i + 1] != ' ' && str[i + 1])
 		{
-			wordOn = 1;
-			words++;
+			size++;
 		}
-		s++;
 	}
-	return (words);
+
+	if (str[0] != ' ' && str[0])
+	{
+		size++;
+	}
+
+	return (size);
+
 }
 
+
 /**
- * strtow - splits a string into words
- * @str: string of words to be split
- * Return: double pointer to strings
+ * **strtow - function that splits a string into words.
+ * @str: str to split
+ *
+ * Return: str splited
  */
+
 char **strtow(char *str)
 {
-	char **ptr;
-	int i, k, len, start, end, j = 0;
+	int size, i, j, columns = 0, k, l;
+	char **matrix;
 
-	if (!str || !countWords(str) || !*str)
-	{
+	if (str == NULL || !*str)
 		return (NULL);
-	}
-	ptr = malloc(sizeof(char *) * (countWords(str) + 1));
-	if (!ptr)
-	{	
+	size = get_words(str);
+	if (!size)
 		return (NULL);
-	}
-	for (i = 0; i < countWords(str); i++)
+	matrix = (char **)malloc(sizeof(char *) * (size + 1));
+	if (!matrix)
+		return (NULL);
+	for (i = 0; str[i]; i++)
 	{
-		start = startIndex(str, j);
-		end = endIndex(str, start);
-		len = end - start;
-		ptr[i] = malloc(sizeof(char) * (len + 1));
-		if (!ptr[i])
+		if (str[i] != ' ' && (str[i - 1] == ' ' || i == 0))
 		{
-			return (NULL);
+
+			for (j = 1; str[i + j] && str[i + j] != ' ' ; j++)
+				;
+			j++;/* Null char */
+			matrix[columns] = (char *)malloc(sizeof(char) * j);
+			if (!matrix[columns])
+			{
+				for (k = 0; k < columns; k++)
+					free(matrix[columns]);
+				free(matrix);
+				return (NULL);
+			}
+			else
+			{
+				for (l = 0; l < j - 1; l++)
+				{
+					matrix[columns][l] = str[i + l];
+				}
+				matrix[columns][l] = '\0';
+				columns++;
+			}
 		}
-		for (k = 0; k < len; k++)
-		{	
-			ptr[i][k] = str[start++];
-		}
-		ptr[i][k++] = 0;
-		j = end + 1;
 	}
-	
-	ptr[i] = NULL;
-	return (ptr);
+
+	return (matrix);
 }

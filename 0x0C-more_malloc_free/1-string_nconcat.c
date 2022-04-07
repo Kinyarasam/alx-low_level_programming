@@ -1,16 +1,15 @@
 #include "main.h"
 #include <stdlib.h>
+
 /**
  * _strlen - find length of a string
  * @s: string
- *
  * Return: int
  */
 
 unsigned int _strlen(char *s)
 {
 	unsigned int size = 0;
-	
 	for (; s[size] != '\0'; size++)
 	;
 	return (size);
@@ -21,7 +20,6 @@ unsigned int _strlen(char *s)
  * @s1: string 1
  * @s2: string 2
  * @n: first bytes of s2 to be used
- * 
  * Return: pointer or NULL
  */
 
@@ -38,8 +36,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n < _strlen(s2))
 		m = malloc(_strlen(s1) + n * sizeof(char) + 1);
 	else
-		m = malloc(_strlen(s1) + _strlen(s2) + 1);
-
+	m = malloc(_strlen(s1) + _strlen(s2) + 1);
+	
 	if (m == 0)
 		return (NULL);
 
@@ -53,4 +51,3 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	return (m);
 }
-

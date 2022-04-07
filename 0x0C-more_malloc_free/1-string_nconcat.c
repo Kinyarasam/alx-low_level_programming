@@ -7,7 +7,6 @@
  * 
  * Return: int
  */
-
 unsigned int _strlen(char *s)
 {
 	unsigned int size = 0;
@@ -25,7 +24,6 @@ unsigned int _strlen(char *s)
  * 
  * Return: pointer or NULL
  */
-
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i, j;

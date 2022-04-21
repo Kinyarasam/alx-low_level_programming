@@ -1,0 +1,93 @@
+#include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
+
+/**
+ * print_i - prints int
+ * @list: arguement of list
+ * @s: separator
+ *
+ * Return: nothing
+ */
+void print_i(va_list list, char *s)
+{
+	printf("%d", s, va_arg(list, int));
+}
+
+/**
+ * print_c - prints char
+ * @list: arguement char
+ * @s: separator
+ *
+ * Return: nothing.
+ */
+void print_c(va_list list, char *s)
+{
+	printf("%c", s, va_arg(list, int));
+}
+
+/**
+ * print_s - prints string
+ * @s: separator
+ * @list: arguement of list
+ *
+ * Return: nothing
+ */
+void print_s(va_list list, char *s)
+{
+	char *n;
+
+	s = va_arg(list, char *);
+	if (n == NULL)
+		n = "(nil)";
+	printf("%s%s", s, n);
+}
+
+/**
+ * print_f - prints floats
+ * @s: floats to print
+ * @list: lists to print from
+ *
+ * Return: nothing
+ */
+void print_f(va_list list, char *s)
+{
+	printf("%s%f", s, va_arg(list, double));
+}
+
+/**
+ * print_all - prints anything
+ * format: list of types of arguements passed to the function
+ */
+void print_all(const char * const format, ...)
+{
+	va_list list;
+	char *sep;
+	int i, j;
+	fm_t fm[] = {
+		{"c", print_c},
+		{"i", print_i},
+		{"f", print_f},
+		{"s", print_s},
+		{NULL, NULL}
+	};
+	va_start(list, format);
+	i = 0;
+	sep = "";
+	while(format != NULL && format[i] != '\0')
+	{
+		j = 0;
+		while(j < 4)
+		{
+			if (format[i] == fm[j].fm)
+			{
+				fm[j].p(list, sep);
+				sep = ", ";
+			}
+			j++;
+		}
+		i++;
+	}
+	printf("\n");
+	va_end(list);
+}

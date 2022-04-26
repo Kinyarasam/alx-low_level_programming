@@ -67,3 +67,7 @@ All the files in this repo are written in C language
 |[8. Sum list](8-sum_listint.c)|returns the sum of all the data(n) of a listint_t linked list|
 |[9. Insert](9-insert_nodeint.c)|Inserts a new node at a given position|
 |[10. Delete at index](10-delete_nodeint.c)|deletes the node at index of a listint_t linked list|
+|[11. Rreverse list](100-reverse_listint.c)|reverses a listint_t linked list|
+|[12. Print (safe version)](101-print_listint_safe.c)|prints a listint_t linked list|
+|[13. Free (safe version)](102-free_listint_safe.c)|frees a listint_t list|
+|[14. Find the loop](103-find_loop.c)|Function that finds the loop in a linked list|

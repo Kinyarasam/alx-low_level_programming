@@ -29,7 +29,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 				nodes = nodeAt;
 				nodeAt = nodeAt->next;
 				nodes->next = nodeAt->next;
-				free (nodeAt);
+				free(nodeAt);
 				return (1);
 			}
 			nodeAt = nodeAt->next;

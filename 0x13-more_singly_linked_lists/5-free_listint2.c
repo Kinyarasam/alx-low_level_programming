@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * free_listint2 - 
- * @head:
+ * free_listint2 - frees a linked listint_t list
+ * @head: pointer to linked list head
  *
  * Return:nothing
  */
@@ -12,7 +12,7 @@ void free_listint2(listint_t **head)
 
 	if (head)
 	{
-		while(*head)
+		while (*head)
 		{
 			temp = *head;
 			*head = (*head)->next;

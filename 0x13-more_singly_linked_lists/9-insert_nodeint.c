@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * insert_node_at_index - inserts node
+ * insert_nodeint_at_index - inserts node
  * @head: pointer to list head
  * @idx: index of element
  * @n: integer
@@ -12,7 +12,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
 	listint_t *newNode, *ptr;
 	unsigned int count;
-	
+
 	if (head)
 	{
 		newNode = malloc(sizeof(*newNode));

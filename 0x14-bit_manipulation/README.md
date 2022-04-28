@@ -37,7 +37,9 @@ All files In this repository are written in C.
 
 |Filename|Description|
 |--------|-----------|
-|[0.0](0-binary_to_uint.c)|converts a binary number to an unsigned int|
-|[1.1](1-print_binary.c)|prints the binary representation of a number|
+|[0.0](./0-binary_to_uint.c)|converts a binary number to an unsigned int|
+|[1.1](./1-print_binary.c)|prints the binary representation of a number|
+|[2.10](./2-get_bit.c)|returns ths value of a bit at a given index|
+|[3.11](./3-set_bit.c)|sets the value of a bit to 1 at a given index|
 
 ---

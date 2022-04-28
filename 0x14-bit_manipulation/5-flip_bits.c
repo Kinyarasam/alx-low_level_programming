@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * flip_bit - finds how many bits you need to switch for converting to m
+ * flip_bits- finds how many bits you need to switch for converting to m
  * @n: number to be checked
  * @m: desired number
  *

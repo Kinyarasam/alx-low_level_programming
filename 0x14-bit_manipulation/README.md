@@ -3,11 +3,11 @@
 ## Resources
 
 ### Read or watch:
-* [Google]()
-* [Youtube]()
+* [Google](https://www.google.com/webhp?q=bit+manipulation+C)
+* [Youtube](https://www.youtube.com/results?search_query=bitwise+operators+in+c)
 
 ## Learning Objectives
-At the end of this project, you are expected to be able to [explain to anyone](), **without the help of Google:**
+At the end of this project, you are expected to be able to [explain to anyone](https://fs.blog/feynman-learning-technique/), **without the help of Google:**
 
 ### General
 - Look at the right source of information without too much help
@@ -24,7 +24,7 @@ At the end of this project, you are expected to be able to [explain to anyone]()
 * You are not allowed to use global variables
 * No more than 5 functions per file
 * The only C standard library functions allowed are `malloc`, `free` and `exit`. Any use of the functions like `printf`, `puts`, `calloc`, `realloc` etc.. is forbidden
-* You are allowed to use [\_putchar](ssdhj)
+* You are allowed to use [\_putchar](https://github.com/holbertonschool/_putchar.c/blob/master/_putchar.c)
 * You don't have to push `_putchar.c`, we will use our file. If you do it won't be taken into account
 * In the following examples, the `main.c` files are shown as examples. You can use them to test your functions, but you don't have to push them to your repo(if you do we won't take them into account). We will use our own `main.c` files at compilation. Our `main.c` files might be different from the one shown in the examples
 * The prototypes of all your functions and the prototype of the function `_putchar` should be included in your header file called `main.h`
@@ -43,5 +43,7 @@ All files In this repository are written in C.
 |[3.11](./3-set_bit.c)|sets the value of a bit to 1 at a given index|
 |[4.100](./4-clear_bit.c)|sets the value of a bit to 0 at a given index|
 |[5.101](./5-flip_bits)|Returns the number of bits you were to flip from one number to another|
+|[6.Endianness](./100-get_endianness)|checks the endianness|
+|[7.Crackme3](./101-password)|find the password for [this program](https://github.com/holbertonschool/0x13.c)|
 
 ---

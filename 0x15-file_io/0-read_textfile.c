@@ -5,7 +5,7 @@
  * @filename: buffer
  * @letters: number of characters
  *
- * return: Always 0.(Success)
+ * Return: Always 0.(Success)
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {

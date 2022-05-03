@@ -16,7 +16,7 @@ int _strlen(char *s)
 }
 
 /**
- * create-file - creates a file
+ * create_file - creates a file
  * @filename: filename to be printed
  * @text_content: content of the file
  *

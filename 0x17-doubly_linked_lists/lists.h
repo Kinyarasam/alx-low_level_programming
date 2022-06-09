@@ -1,9 +1,6 @@
 #ifndef DLISTS_H
 #define DLISTS_H
 
-/**
- * HEADER FILES
- */
 #include <stdio.h>
 #include <stddef.h>
 
@@ -23,9 +20,6 @@ typedef struct dlistint_s
 	struct dlistint_s *next;
 } dlistint_t;
 
-/**
- * Return the number of nodes
- */
 size_t print_dlistint(const dlistint_t *h);
 
 #endif /* DLISTS_H */

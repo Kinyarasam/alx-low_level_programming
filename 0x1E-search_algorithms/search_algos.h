@@ -1,4 +1,4 @@
-#ifdef SEARCH_ALGO_H
+#ifndef SEARCH_ALGO_H
 #define SEARCH_ALGO_H
 
 #include <stdio.h>
